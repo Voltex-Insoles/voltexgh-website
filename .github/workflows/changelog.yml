@@ -1,0 +1,35 @@
+name: Changelog
+
+on:
+    push:
+        branches:
+            - main
+
+permissions:
+    contents: write
+
+jobs:
+    changelog:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+
+            - name: Get commit message
+              id: commit
+              run: |
+                MSG=$(git log -1 --pretty=%B ${{ github.sha }})
+                echo "message=$MSG" >> $GITHUB_OUTPUT
+
+            - name: Update CHANGELOG
+              run: |
+                sed -i "s/## \[Unreleased\]/## [Unreleased]\n\n - $(date +'%Y-%m-%d') - '${{ steps.commit.outputs.message }}'/" CHANGELOG.md
+            
+            - name: Commit CHANGELOG
+              run: |
+                git config user.name "github-actions"
+                git config user.email "actions@github.com"
+                git add CHANGELOG.md
+                git diff --staged --quiet || git commit -m "docs: update CHANGELOG"
+                git push
