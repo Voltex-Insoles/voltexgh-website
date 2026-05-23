@@ -265,7 +265,6 @@ nav {
 	gap: 30px;
 	list-style: none;
 	align-items: center;
-	margin: 0;
 }
 
 .nav-links a {
@@ -275,6 +274,11 @@ nav {
 	font-weight: 400;
 	letter-spacing: 0.04em;
 	transition: color 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+	text-decoration: underline var(--accent-color) 3px;
+	text-underline-offset: 4px;
 }
 
 .ham {
@@ -317,6 +321,41 @@ nav {
 	opacity: 0;
 	pointer-events: none;
 	transition: opacity .4s var(--ease-out);
+}
+
+.ham.open .ham-line:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+}
+
+.ham.open .ham-line:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.ham.open .ham-line:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* Mobile navigation */
+
+.mobile-nav.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.mobile-nav a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 9vw, 54px);
+    font-weight: 300;
+    color: var(--text-s);
+    text-decoration: none;
+    padding: 12px 0;
+    letter-spacing: .03em;
+    transition: color .2s;
+}
+
+.mobile-nav a:hover {
+    color: var(--pw-dark);
 }
 
 .header .logo h1 {

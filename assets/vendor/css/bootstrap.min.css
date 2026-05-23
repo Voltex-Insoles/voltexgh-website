@@ -182,12 +182,6 @@
     --bs-form-invalid-border-color: #ea868f
 }
 
-*,
-::after,
-::before {
-    box-sizing: border-box
-}
-
 @media (prefers-reduced-motion:no-preference) {
     :root {
         scroll-behavior: smooth
@@ -314,18 +308,6 @@ address {
     line-height: inherit
 }
 
-ol,
-ul {
-    padding-left: 2rem
-}
-
-dl,
-ol,
-ul {
-    margin-top: 0;
-    margin-bottom: 1rem
-}
-
 ol ol,
 ol ul,
 ul ol,
@@ -424,19 +406,6 @@ code {
 
 a>code {
     color: inherit
-}
-
-kbd {
-    padding: .1875rem .375rem;
-    font-size: .875em;
-    color: var(--bs-body-bg);
-    background-color: var(--bs-body-color);
-    border-radius: .25rem
-}
-
-kbd kbd {
-    padding: 0;
-    font-size: 1em
 }
 
 figure {
