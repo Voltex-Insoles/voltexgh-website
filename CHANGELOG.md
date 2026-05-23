@@ -4,6 +4,8 @@ All notable changes to this project will be documented here.
 
 ## [Unreleased]
 
+ - 2026-05-23 - 'refactor: delete unnecessary lines and comments'
+
  - 2026-05-23 - 'feat: redesign header and simplify structure'
 
  - 2026-05-22 - 'feat: web styling'
