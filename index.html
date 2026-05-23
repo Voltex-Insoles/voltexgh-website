@@ -23,22 +23,30 @@
 </head>
 
 <body class="index-page">
-	<header id="header" class="header d-flex align-items-center sticky-top dark-background">
-		<div class="container position-relative d-flex align-items-center justify-content-between">
-			<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-			<a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-				<img src="assets/img/logo.png" alt="voltex logo">
+	<header id="header">
+		<nav>
+			<a href="index.html" class="nav-logo">
+				<img src="assets/img/logo.png" alt="Voltex GH logo">
 			</a>
-			<nav id="navmenu" class="navmenu">
-				<ul>
-					<li><a href="#hero" class="active">Home<br></a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#gallery">Gallery</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
+			<ul class="nav-links">
+				<li><a href="#hero" class="active">Home<br></a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#gallery">Gallery</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+			<button class="ham" id="ham" onclick="" aria-label="Open menu">
+                <span class="ham-line"></span>
+                <span class="ham-line"></span>
+                <span class="ham-line"></span>
+            </button>
+		</nav>
+		<div id="navmenu" class="mobile-nav">
+			<a href="#about" onclick="">About</a>
+            <a href="#gallery" onclick="">Gallery</a>
+            <a href="#contact" onclick="">Get in Touch</a>
 		</div>
 	</header>
+
 	<main class="main">
 		<!-- Hero Section -->
 		<section id="hero" class="hero section light-background">
@@ -50,7 +58,7 @@
 							the world one <strong><i>step</i></strong> at a time</p>
 						<div class="d-flex" data-aos="fade-up" data-aos-delay="200">
 							<!--<a href="#book-a-table" class="btn-get-started">Book a Table</a>-->
-							<a href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+							<a href="assets/vids/voltex-demo.mp4"
 								class="glightbox btn-watch-video d-flex align-items-center"><i
 									class="bi bi-play-circle"></i><span>Watch Video</span></a>
 						</div>
@@ -519,8 +527,8 @@
 					</script>
 					<div class="swiper-wrapper align-items-center">
 						<div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-								href="assets/img/shoe-in-hand.jpg"><img
-									src="assets/img/shoe-in-hand.jpg" class="img-fluid" alt="Shoe in hand"></a></div>
+								href="assets/img/shoe-in-hand.jpg"><img src="assets/img/shoe-in-hand.jpg"
+									class="img-fluid" alt="Shoe in hand"></a></div>
 						<div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
 								href="assets/img/gallery/smart-shoe.png"><img
 									src="assets/img/gallery/smart-shoe.png.jpg" class="img-fluid" alt=""></a></div>
@@ -690,9 +698,11 @@
 			</div>
 		</div>
 	</footer>
+
 	<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
-		<i class="bi bi-arrow-up-short"></i>
+		<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg>
 	</a>
+	
 	<div id="preloader"></div>
 	<script src="assets/vendor/js/bootstrap.bundle.min.js"></script>
 	<script src="assets/vendor/js/aos.js"></script>

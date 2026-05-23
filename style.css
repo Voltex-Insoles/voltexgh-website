@@ -1,3 +1,10 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
 /* Fonts */
 :root {
 	--default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -55,18 +62,17 @@
 	--contrast-color: #ffffff;
 }
 
-/* Smooth scroll */
-:root {
+
+html {
 	scroll-behavior: smooth;
 }
 
-/*--------------------------------------------------------------
-# General Styling & Shared Classes
---------------------------------------------------------------*/
+
 body {
 	color: var(--default-color);
 	background-color: var(--background-color);
 	font-family: var(--default-font);
+	overflow-x: hidden;
 }
 
 a {
@@ -109,7 +115,7 @@ h6 {
 	width: 120px;
 	height: 120px;
 	animation-delay: 0s;
-	animation: pulsate-play-btn 2s;
+	animation: pulsate-play-btn 1s;
 	animation-direction: forwards;
 	animation-iteration-count: infinite;
 	animation-timing-function: steps;
@@ -222,24 +228,95 @@ h6 {
 	}
 }
 
-/*--------------------------------------------------------------
-# Global Header
---------------------------------------------------------------*/
-.header {
-	color: var(--default-color);
-	background-color: var(--background-color);
-	padding: 20px 0;
+
+nav {
+	position: sticky;
+	top: 0;
+	z-index: 99;
+	background: var(--default-color);
+	color: var(--background-color);
 	transition: all 0.5s;
-	z-index: 997;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 3%;
+	height: 75px;
 }
 
-.header .logo {
-	line-height: 1;
+
+.nav-logo {
+	height: 65px;
+	width: auto;
+	font-size: 0;
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
 }
 
-.header .logo img {
-	max-height: 80px;
-	margin-right: 8px;
+.nav-logo img {
+	height: 100%;
+	width: auto;
+	flex-shrink: 0;
+	object-fit: contain;
+}
+
+.nav-links {
+	display: flex;
+	gap: 30px;
+	list-style: none;
+	align-items: center;
+	margin: 0;
+}
+
+.nav-links a {
+	color: rgba(255, 255, 255, 0.65);
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: 400;
+	letter-spacing: 0.04em;
+	transition: color 0.2s;
+}
+
+.ham {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	gap: 5px;
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+	background: none;
+	border: none;
+	padding: 4px;
+}
+
+.ham-line {
+	display: block;
+	width: 100%;
+	height: 1.5px;
+	background: var(--pw-light);
+	border-radius: 4px;
+	transition: transform .35s var(--ease-out), opacity .25s;
+	transform-origin: center;
+}
+
+.mobile-nav {
+	position: fixed;
+	top: 66px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(58, 58, 76, 0.94);
+	-webkit-backdrop-filter: blur(24px);
+	backdrop-filter: blur(24px);
+	z-index: 490;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity .4s var(--ease-out);
 }
 
 .header .logo h1 {
@@ -250,10 +327,7 @@ h6 {
 	font-family: var(--default-font);
 }
 
-.header .logo span {
-	color: var(--accent-color);
-	font-size: 36px;
-}
+
 
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
@@ -288,9 +362,6 @@ h6 {
 	}
 }
 
-.scrolled .header {
-	box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
-}
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -677,7 +748,7 @@ h6 {
 	transition: all 0.4s;
 }
 
-.scroll-top i {
+.scroll-top svg {
 	font-size: 24px;
 	color: var(--contrast-color);
 	line-height: 0;
