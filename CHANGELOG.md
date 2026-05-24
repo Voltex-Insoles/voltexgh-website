@@ -4,6 +4,8 @@ All notable changes to this project will be documented here.
 
 ## [Unreleased]
 
+ - 2026-05-24 - 'feat: mobile menu navigation feature'
+
  - 2026-05-24 - 'refactor: migrate existing css and js into new files'
 
  - 2026-05-23 - 'refactor: delete unnecessary lines and comments'
