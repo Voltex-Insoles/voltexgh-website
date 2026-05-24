@@ -58,8 +58,6 @@
 
 body {
 	color: var(--default-color);
-	background-color: var(--background-color);
-	font-family: var(--default-font);
 }
 
 a {
@@ -81,7 +79,6 @@ h4,
 h5,
 h6 {
 	color: var(--heading-color);
-	font-family: var(--heading-font);
 }
 
 /* Pulsating Play Button

@@ -5,21 +5,24 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
-	<meta name="keywords" content="voltex, piezo, renewable energy, piezo voltex energy">
 	<title>Voltex GH</title>
 	<link href="assets/img/logo.png" rel="icon" sizes="70">
 	<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-	<link href="https://fonts.googleapis.com" rel="preconnect">
-	<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+
+	<link rel="preconnect" href="https://googleapis.com">
+	<link rel="preconnect" href="https://gstatic.com" crossorigin>
 	<link
-		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Amatic+SC:wght@400;700&display=swap"
+		href="https://googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Nunito:ital,wght@0,400;0,700;0,900;1,400&display=swap"
 		rel="stylesheet">
+
+
 	<link href="assets/vendor/css/bootstrap.min.css" rel="stylesheet">
 	<link href="assets/vendor/css/bootstrap-icons.css" rel="stylesheet">
 	<link href="assets/vendor/css/aos.css" rel="stylesheet">
 	<link href="assets/vendor/css/glightbox.min.css" rel="stylesheet">
 	<link href="assets/vendor/css/swiper-bundle.min.css" rel="stylesheet">
 	<link href="style.css" rel="stylesheet">
+	<link rel="stylesheet" href="old.css">
 </head>
 
 <body class="index-page">
@@ -34,13 +37,13 @@
 				<li><a href="#gallery">Gallery</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
-			<button class="ham" id="ham" onclick="" aria-label="Open menu">
+			<button class="ham" id="ham" onclick="toggleMenu()" aria-label="Open menu">
 				<span class="ham-line"></span>
 				<span class="ham-line"></span>
 				<span class="ham-line"></span>
 			</button>
 		</nav>
-		<div id="navmenu" class="mobile-nav">
+		<div id="mobileNav" class="mobile-nav">
 			<a href="#about" onclick="">About</a>
 			<a href="#gallery" onclick="">Gallery</a>
 			<a href="#contact" onclick="">Get in Touch</a>
@@ -49,18 +52,19 @@
 
 	<main class="main">
 		<!-- Hero Section -->
-		<section id="hero" class="hero section light-background">
+		<section id="hero" class="hero">
 			<div class="container">
 				<div class="row gy-4 justify-content-center justify-content-lg-between">
 					<div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center">
-						<h1 data-aos="fade-up">Harness The Power Of<br>Your Stride</h1>
-						<p data-aos="fade-up" data-aos-delay="100">We are team of young entrepreneurs ready to change
+						<h1 class="hero-headline" data-aos="fade-up">Harness the Power of<br>Your Stride</h1>
+						<p class="hero-slogan" data-aos="fade-up" data-aos-delay="100">We are team of young
+							entrepreneurs ready to change
 							the world one <strong><i>step</i></strong> at a time</p>
 						<div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-							<!--<a href="#book-a-table" class="btn-get-started">Book a Table</a>-->
 							<a href="assets/vids/voltex-demo.mp4"
-								class="glightbox btn-watch-video d-flex align-items-center"><i
-									class="bi bi-play-circle"></i><span>Watch Video</span></a>
+								class="glightbox btn-watch-video d-flex align-items-center">
+								<i class="bi bi-play-circle"></i><span>Watch Video</span>
+							</a>
 						</div>
 					</div>
 					<div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
@@ -426,6 +430,7 @@
 	<script src="assets/vendor/js/purecounter_vanilla.js"></script>
 	<script src="assets/vendor/js/swiper-bundle.min.js"></script>
 	<script defer src="script.js"></script>
+	<script src="old.js"></script>
 </body>
 
 </html>
