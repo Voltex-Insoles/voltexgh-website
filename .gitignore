@@ -1,3 +1,6 @@
-bootstrap-utilities.rtl.min.css.map
-bootstrap.css
 .vscode
+
+generate-optimized-images.js
+node_modules/
+package-lock.json
+package.json
