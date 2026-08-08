@@ -4,6 +4,8 @@ All notable changes to this project will be documented here.
 
 ## [Unreleased]
 
+ - 2026-08-08 - 'feat: gallery section, smooth scrolling, video modal'
+
  - 2026-08-07 - 'feat: include new media files'
 
  - 2026-05-24 - 'feat: mobile nav, color scheme'
