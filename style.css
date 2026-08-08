@@ -56,6 +56,10 @@ a:hover {
 	text-decoration: none;
 }
 
+picture {
+	display: contents;
+}
+
 section {
 	overflow: clip;
 	padding: clamp(28px, 6vw, 40px) 0;
@@ -235,6 +239,51 @@ nav {
 	}
 }
 
+.video-modal-overlay {
+	position: fixed;
+	inset: 0;
+	z-index: 100000;
+	background: rgba(0, 0, 0, 0.85);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease;
+}
+
+.video-modal-overlay.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+.video-modal {
+	position: relative;
+	width: 100%;
+	max-width: 900px;
+}
+
+.video-modal-player {
+	width: 100%;
+	max-height: 80vh;
+	border-radius: 8px;
+	display: block;
+	background: #000;
+}
+
+.video-modal-close {
+	position: absolute;
+	top: -40px;
+	right: 0;
+	background: none;
+	border: none;
+	color: #fff;
+	font-size: 32px;
+	line-height: 1;
+	cursor: pointer;
+}
+
 
 /*About Section*/
 .about-media {
@@ -350,7 +399,15 @@ nav {
 
 	background: linear-gradient(rgba(8, 12, 20, .45),
 			rgba(8, 12, 20, .55)),
-		url("assets/img/background.png");
+		url("assets/img/optimized/background.jpg");
+	background: linear-gradient(rgba(8, 12, 20, .45),
+			rgba(8, 12, 20, .55)),
+		-webkit-image-set(url("assets/img/optimized/background.webp") type("image/webp"),
+			url("assets/img/optimized/background.jpg") type("image/jpeg"));
+	background: linear-gradient(rgba(8, 12, 20, .45),
+			rgba(8, 12, 20, .55)),
+		image-set(url("assets/img/optimized/background.webp") type("image/webp"),
+			url("assets/img/optimized/background.jpg") type("image/jpeg"));
 }
 
 .product-display::before {
@@ -821,8 +878,7 @@ footer {
 }
 
 
-
-
+/*Scroll Animations*/
 [data-aos] {
 	opacity: 0;
 	transition-property: opacity, transform;
@@ -852,53 +908,4 @@ footer {
 	[data-aos-delay] {
 		transition-delay: 0 !important;
 	}
-}
-
-
-
-
-
-.video-modal-overlay {
-	position: fixed;
-	inset: 0;
-	z-index: 100000;
-	background: rgba(0, 0, 0, 0.85);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 20px;
-	opacity: 0;
-	visibility: hidden;
-	transition: opacity 0.3s ease;
-}
-
-.video-modal-overlay.active {
-	opacity: 1;
-	visibility: visible;
-}
-
-.video-modal {
-	position: relative;
-	width: 100%;
-	max-width: 900px;
-}
-
-.video-modal-player {
-	width: 100%;
-	max-height: 80vh;
-	border-radius: 8px;
-	display: block;
-	background: #000;
-}
-
-.video-modal-close {
-	position: absolute;
-	top: -40px;
-	right: 0;
-	background: none;
-	border: none;
-	color: #fff;
-	font-size: 32px;
-	line-height: 1;
-	cursor: pointer;
 }
