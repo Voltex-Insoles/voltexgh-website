@@ -4,6 +4,8 @@ All notable changes to this project will be documented here.
 
 ## [Unreleased]
 
+ - 2026-08-08 - 'feat: product display section,improve footer, code cleanup'
+
  - 2026-08-08 - 'feat: gallery section, smooth scrolling, video modal'
 
  - 2026-08-07 - 'feat: include new media files'
