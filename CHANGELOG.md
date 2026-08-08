@@ -4,6 +4,8 @@ All notable changes to this project will be documented here.
 
 ## [Unreleased]
 
+ - 2026-08-08 - 'Merge branch 'test-feature''
+
  - 2026-08-08 - 'chore: general file cleanup'
 
  - 2026-08-08 - 'feat: interface styling'
