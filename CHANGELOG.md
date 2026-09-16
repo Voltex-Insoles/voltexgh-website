@@ -4,6 +4,8 @@ All notable changes to this project will be documented here.
 
 ## [Unreleased]
 
+ - 2026-09-16 - 'feat: vercel deployment'
+
  - 2026-08-08 - 'Merge branch 'edits''
 
  - 2026-08-08 - 'Merge branch 'test-feature''
