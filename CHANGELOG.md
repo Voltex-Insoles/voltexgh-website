@@ -4,6 +4,8 @@ All notable changes to this project will be documented here.
 
 ## [Unreleased]
 
+ - 2026-09-17 - 'fix: vercel deploy actions'
+
  - 2026-09-16 - 'feat: vercel deployment'
 
  - 2026-08-08 - 'Merge branch 'edits''
