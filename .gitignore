@@ -4,3 +4,5 @@ generate-optimized-images.js
 node_modules/
 package-lock.json
 package.json
+.vercel
+.env*
