@@ -4,6 +4,8 @@ All notable changes to this project will be documented here.
 
 ## [Unreleased]
 
+ - 2026-09-25 - 'fix: improve accessibility'
+
  - 2026-09-25 - 'chore: google site verification'
 
  - 2026-09-17 - 'fix: vercel deploy actions'
