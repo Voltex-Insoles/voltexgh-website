@@ -4,6 +4,8 @@ All notable changes to this project will be documented here.
 
 ## [Unreleased]
 
+ - 2026-10-01 - 'fix: title not appearing in search results'
+
  - 2026-09-25 - 'style: remove unused codes'
 
  - 2026-09-25 - 'fix: improve accessibility'
